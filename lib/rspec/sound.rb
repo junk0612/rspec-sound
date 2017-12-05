@@ -1,6 +1,6 @@
-require "rspec/sound/version"
+require 'rspec/sound/version'
 
-module Rspec
+module RSpec
   module Sound
     # Your code goes here...
   end
