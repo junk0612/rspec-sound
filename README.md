@@ -1,8 +1,11 @@
 # RSpec::Sound
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rspec/sound`. To experiment with that code, run `bin/console` for an interactive prompt.
+rspec-sound provides sound while executing specs and notify to you when they finished.
 
-TODO: Delete this and the text above, and describe your gem
+## Requirements
+
+- [mpg123](http://www.mpg123.de/)
+- RSpec
 
 ## Installation
 
@@ -14,22 +17,24 @@ gem 'rspec-sound'
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rspec-sound
+```sh
+bundle
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'rspec/sound'
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+RSpec::Sound.success = '/aaa/bbb/xxx.mp3' # Sound file which does play when a test succeeded.
+RSpec::Sound.failure = '/aaa/bbb/xxx.mp3' # Sound file which does play when a test failed.
+RSpec::Sound.during_test = '/aaa/bbb/xxx.mp3' # Sound file which does play during test.
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rspec-sound.
+Bug reports and pull requests are welcome on GitHub at https://github.com/junk0612/rspec-sound.
+
+## License
+
+MIT
