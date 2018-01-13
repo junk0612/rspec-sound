@@ -8,3 +8,7 @@ rvm:
 before_script:
   - sudo apt-get upgrade -qq
   - sudo apt-get install -qq mpg123
+notifications:
+  webhooks:
+    - https://idobata.io/hook/travis_ci/5b722d32-5e6f-4089-aec1-860ba3c1adee
+  email: false
