@@ -1,6 +1,10 @@
 # RSpec::Sound
 
+[![Build Status](https://travis-ci.org/junk0612/rspec-sound.svg?branch=master)](https://travis-ci.org/junk0612/rspec-sound)
+
 rspec-sound provides sound while executing specs and notify to you when they finished.
+
+This gem is inspired by [minitest-sound](https://github.com/y-yagi/minitest-sound).
 
 ## Requirements
 
